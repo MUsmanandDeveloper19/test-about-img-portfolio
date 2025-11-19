@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+    body{
+        margin: 0;
+        font-family: Arial;
+        scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        background: #000;
+        display: flex;
+        gap: 20px;
+        z-index: 10;
+    }
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+    /* HIGHLIGHT ACTIVE MENU */
+    nav a.active{
+        background: #ff2c2c;
+        color: #fff;
+    }
+
+    /* SECTIONS */
+    section{
+        height: 100vh;
+        padding: 80px 50px;
+    }
+
+    #home{ background: #1a1a1a; color: #fff; }
+    #about{ background: #f3f3f3; }
+    #services{ background: #e8e8ff; }
+    #projects{ background: #e2ffe8; }
+    #contact{ background: #ffe9e9; }
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+</nav>
+
+<!-- SECTIONS -->
+<section id="home">
+    <h1>Home Section</h1>
+</section>
+
+<section id="about">
+    <h1>About Section</h1>
+</section>
+
+<section id="services">
+    <h1>Services Section</h1>
+</section>
+
+<section id="projects">
+    <h1>Projects Section</h1>
+</section>
+
+<section id="contact">
+    <h1>Contact Section</h1>
+</section>
+
+
+<!-- ACTIVE LINK HIGHLIGHT SCRIPT -->
+<script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(sec => {
+            const top = window.scrollY;
+            const offset = sec.offsetTop - 120;
+            const height = sec.clientHeight;
+
+            if(top >= offset && top < offset + height){
+                current = sec.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(a => {
+            a.classList.remove("active");
+            if(a.getAttribute("href") === "#" + current){
+                a.classList.add("active");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Snake Border Card</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+    font-family: Arial, sans-serif;
+  }
+
+  .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: box-shadow 0.3s;
+  }
+
+  /* Border elements */
+  .border {
+    position: absolute;
+    background: linear-gradient(90deg, red, orange, red, orange);
+    pointer-events: none;
+    transition: width 0.1s, height 0.1s;
+  }
+
+  .border.top, .border.bottom { height: 3px; width: 0; }
+  .border.left, .border.right { width: 3px; height: 0; }
+
+  .border.top { top: 0; left: 0; }
+  .border.bottom { bottom: 0; left: 0; }
+  .border.left { top: 0; left: 0; }
+  .border.right { top: 0; right: 0; }
+</style>
+</head>
+<body>
+
+<section>
+     <div class="card" id="card">
+        Interactive Card
+        <div class="border top"></div>
+        <div class="border bottom"></div>
+        <div class="border left"></div>
+       <div class="border right"></div>
+</section>
+
+<script>
+  const card = document.getElementById('card');
+  const topBorder = card.querySelector('.border.top');
+  const bottomBorder = card.querySelector('.border.bottom');
+  const leftBorder = card.querySelector('.border.left');
+  const rightBorder = card.querySelector('.border.right');
+
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left; // Mouse X inside card
+    const y = e.clientY - rect.top;  // Mouse Y inside card
+
+    // Snake-like animation: gradually expand borders towards cursor
+    topBorder.style.width = x + 'px';
+    bottomBorder.style.width = x + 'px';
+    leftBorder.style.height = y + 'px';
+    rightBorder.style.height = y + 'px';
+
+    // Optional glow effect following cursor
+    card.style.boxShadow = `0 0 20px rgba(255, 0, 0, ${x/rect.width})`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    // Reset borders
+    topBorder.style.width = '0';
+    bottomBorder.style.width = '0';
+    leftBorder.style.height = '0';
+    rightBorder.style.height = '0';
+    card.style.boxShadow = '0 0 0px rgba(0,0,0,0)';
+  });
+</script>
+
+</body>
+</html>

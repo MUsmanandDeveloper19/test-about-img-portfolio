@@ -1,0 +1,76 @@
+My Portfolio 
+
+CSS Code
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.about-card{
+    width: 240px;
+    height: 210px;
+    border: 1px solid red;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 20px;
+}
+#web-design-icon{
+    font-size: 50px;
+    color: #FF014F;
+    margin: auto;
+}
+#icon-content{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#project-numbers{
+    color: rgb(154, 147, 147);
+}
+
+
+  <div class="row d-flex mx-auto">
+    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto">
+     <!-- WEB_DESIGN -->
+     <a href="#" style="text-decoration: none;">
+      <div class="about-card text-center">
+       <i class="fa-solid fa-pen-ruler mt-5" id="web-design-icon"></i>
+       <h4 class="text-white mt-3" id="icon-content">Web Design</h4>
+       <p id="project-numbers">120 Projects</p>
+      </div>
+     </a>
+     <!-- WEB_DESIGN -->
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto">
+      <!-- UI/UX_DESIGN -->
+     <a href="#" style="text-decoration: none;">
+      <div class="about-card text-center">
+       <i class="fa-solid fa-pen-ruler mt-5" id="web-design-icon"></i>
+       <h4 class="text-white mt-3" id="icon-content">UI/Ux Design</h4>
+       <p id="project-numbers">241 Projects</p>
+      </div>
+     </a>
+     <!-- UI/UX_DESIGN -->
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto">
+      <!-- WEB_RESSEARCH -->
+     <a href="#" style="text-decoration: none;">
+      <div class="about-card text-center">
+       <i class="fa-solid fa-pen-ruler mt-5" id="web-design-icon"></i>
+       <h4 class="text-white mt-3" id="icon-content">Web Research</h4>
+       <p id="project-numbers">120 Projects</p>
+      </div>
+     </a>
+     <!-- WEB_RESSEARCH -->
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto">
+      <!-- MARKETING -->
+     <a href="#" style="text-decoration: none;">
+      <div class="about-card text-center">
+       <i class="fa-solid fa-pen-ruler mt-5" id="web-design-icon"></i>
+       <h4 class="text-white mt-3" id="icon-content">Marketing</h4>
+       <p id="project-numbers">120 Projects</p>
+      </div>
+     </a>
+     <!-- MARKETING -->
+    </div>
+  </div>

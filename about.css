@@ -1,0 +1,336 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.three-years-of-experience-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+/* 1200px se upar (Large Screens) */
+@media (min-width: 1200px) {
+  .three-years-of-experience-img {
+    width: 90%;
+  }
+}
+
+/* 992px - 1199px (Laptop) */
+@media (max-width: 1199px) {
+  .three-years-of-experience-img {
+    width: 95%;
+  }
+}
+
+/* 768px - 991px (Tablet) */
+@media (max-width: 991px) {
+  .three-years-of-experience-img {
+    width: 100%;
+  }
+}
+
+/* 576px - 767px (Small Tablets) */
+@media (max-width: 767px) {
+  .three-years-of-experience-img {
+    width: 100%;
+  }
+}
+
+/* Mobile (576px se neeche) */
+@media (max-width: 576px) {
+  .three-years-of-experience-img {
+    width: 100%;
+  }
+}
+
+.about-card{
+    width: 240px;
+    height: 210px;
+    border: 1px solid red;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 20px;
+}
+#web-design-icon{
+    font-size: 50px;
+    color: #FF014F;
+    margin: auto;
+}
+#icon-content{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#project-numbers{
+    color: rgb(154, 147, 147);
+}
+
+/* year-of-experience */
+ .year-of-experience{
+    width: 100%;
+    height: 300px;
+    border: 1px solid;
+    border-radius: 12px;
+ }
+
+ #years-of-experience-content{
+    color: white;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 50px;
+ }
+
+.about-card {
+  position: relative;
+  width: 260px;
+  height: 240px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border: 2px solid rgb(64, 3, 3);
+  border-radius: 19px;
+  cursor: pointer;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.about-card:hover{
+  background-color: rgb(49, 19, 19);
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #f80707 0%, #95999b 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #f80707 0%, #95999b 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(8px);
+}
+
+.about-card:hover::after {
+  filter: blur(11px);
+}
+
+.about-card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+#about-cards{ 
+  position: relative;
+  top: -37px;
+}
+
+/* LOGOS */
+#about-card-logo{
+  color: white;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+/* LOGOS */
+
+#about-card-pera{
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Read-ME-More-Btn */
+/* From Uiverse.io by satyamchaudharydev */ 
+.read-more-btn{
+  height: 45px;
+  width: 220px;
+  background-color: rgba(67, 4, 4, 0.763);
+  border-radius: 20px;
+}
+button {
+  width: 140px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: #fff;
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
+  cursor: pointer;
+}
+
+button > div,
+button > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+button:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+button .clone > *,
+button .text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+
+button .clone > * {
+  transform: translateY(60px);
+}
+
+button:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+button:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+button:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+button:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+/* icon style and hover */
+button svg {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+button:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+
+/* Read-ME-More-Btn */
+
+
+/* year-of-experience */
+
+/* 03-Years-Of-Experience */
+
+    .years-experience-main-parent {
+      width: 560px;
+      height: 700px;
+      border: 1px solid none;
+      background-color: black;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      /* top: 200px; */
+    }
+
+    .red-moon {
+      width: 470px;
+      height: 470px;
+      border: 1px solid red;
+      border-radius: 50%;
+      background-color: #A80335;
+      filter: blur(8px);
+      position: absolute;
+      z-index: 1; /* Peeche rakhne ke liye */
+    }
+
+    .three-years-of-experience-parent {
+      width: 300px;
+      height: 240px;
+      border: 2px solid rgba(0, 0, 0, 0.03);
+      border-radius: 16px;
+      position: relative;
+      top: -80px;
+      /* left: 280px; */
+      z-index: 2; /* Moon ke upar lane ke liye */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: rgba(36, 19, 19, 0.386);
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+    }
+    .three-years-of-content-03{
+        font-size: 90px;
+        position: absolute;
+        top: 10px;
+    }
+    .three-years-of-content-years-of-experience{
+        font-size: 34px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        top: 130px;
+    }
+
+    .UI-UX-Design-parent{
+       width: 230px;
+       height: 100px;
+       border-radius: 20px;
+       border: 1px solid rgba(36, 19, 19, 0.386);
+       background-color: rgba(36, 19, 19, 0.386);
+       z-index: 111;
+       position: relative;
+       top: 120px;
+       left: -20px;
+    }
+    .ui-ux-design-lock-icon{
+      width: 100%;
+      height: 100%;
+      border: 1px solid none;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+/* 03-Years-Of-Experience */

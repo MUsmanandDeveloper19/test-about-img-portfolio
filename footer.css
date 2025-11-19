@@ -1,0 +1,377 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#footer-child-parent{
+    width: 97%;
+    height: auto;
+    margin: auto;
+    border: 2px solid rgb(77, 2, 2);
+    border-radius: 12px;
+    margin-left: -5px;
+}
+
+#footer-child-parent:hover {
+    transition: all 1s;
+    transform: scale(1.05); 
+    border-color: darkred;
+    border: 3px solid; 
+    background-color: rgb(15, 15, 15); 
+}
+
+.footer-icons-div{
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+    border-radius: 50%;
+    padding: 10px;
+    animation: 4s footer-icon-ring linear infinite alternate;
+}
+@keyframes footer-icon-ring {
+    0%{
+       border: 2px solid red; 
+    }
+    30%{
+        border: 2px solid black;
+    }
+    70%{
+        border: 2px solid red;
+    }
+    100%{
+        border: 2px solid black;
+    }
+}
+
+/* Email-Section */
+
+.footer-icons-div{
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+    border-radius: 50%;
+    padding: 10px;
+    animation: 4s footer-icon-ring linear infinite alternate;
+}
+@keyframes footer-icon-ring {
+    0%{
+       border: 2px solid red; 
+    }
+    30%{
+        border: 2px solid black;
+    }
+    70%{
+        border: 2px solid red;
+    }
+    100%{
+        border: 2px solid black;
+    }
+}
+
+/* #Footer-inputs{
+    width: 230px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(58, 56, 56);
+    border-radius: 6px;color: white;
+    background-color: black;
+} */
+
+/* From Uiverse.io by Praashoo7 */ 
+.input {
+  width: 226px;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 1em;
+  margin-top: 30px;
+  border-radius: 8px;
+  background-color: black;
+  box-shadow: inset 2px 5px 10px rgb(63, 61, 61);
+  transition: 300ms ease-in-out;
+}
+
+.input:focus {
+  color: gray   ;
+  background-color: black;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,-13px -13px 100px #ffffff;
+}
+
+/* Base style */
+.input {
+  width: 100%;          /* Parent container ke width ke hisaab se adjust */
+  max-width: 490px;     /* Desktop ke liye maximum width */
+  height: 40px;         /* Desktop height */
+  border: none;
+  outline: none;
+  padding: 1em;
+  margin-top: 30px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  box-shadow: inset 2px 5px 10px rgb(63, 61, 61);
+  transition: 300ms ease-in-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Large screens (≤1240px) */
+@media screen and (max-width: 1240px) {
+  .input {
+    max-width: 400px;
+    height: 35px;
+  }
+}
+
+/* Medium screens (≤992px) */
+@media screen and (max-width: 992px) {
+  .input {
+    max-width: 350px;
+    height: 35px;
+  }
+}
+
+/* Small screens (≤768px) */
+@media screen and (max-width: 768px) {
+  .input {
+    max-width: 300px;
+    height: 30px;
+    padding: 0.8em;
+  }
+}
+
+/* Extra small screens (≤576px) */
+@media screen and (max-width: 576px) {
+  .input {
+    width: 100%;        /* Full width on mobile */
+    height: 28px;
+    padding: 0.7em;
+    font-size: 14px;
+  }
+}
+
+
+#Messsage{
+  width: 470px;
+  height: 130px;
+  border: none;
+  outline: none;
+  padding: 1em;
+  margin-top: 30px;
+  border-radius: 8px;
+  background-color: black;
+  box-shadow: inset 2px 5px 10px rgb(63, 61, 61);
+  transition: 300ms ease-in-out;  
+}
+
+
+@media screen and (max-width: 1199px) {
+  .input {
+  width: 190px;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 1em;
+  margin-top: 30px;
+  border-radius: 8px;
+  background-color: black;
+  box-shadow: inset 2px 5px 10px rgb(63, 61, 61);
+  transition: 300ms ease-in-out;
+}
+}
+
+
+#message {
+  width: 490px;
+  height: 130px;
+  border: none;
+  outline: none;
+  padding: 1em;
+  margin-top: 30px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  box-shadow: inset 2px 5px 10px rgb(63, 61, 61);
+  transition: 300ms ease-in-out;
+}
+
+/* Large screens (max-width: 1199px) */
+@media screen and (max-width: 1199px) {
+  #message {
+    width: 390px;
+  }
+}
+
+/* Medium screens (max-width: 991px) */
+@media screen and (max-width: 991px) {
+  #message {
+    width: 330px;
+  }
+}
+
+/* Small screens (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  #message {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+/* Extra small screens (max-width: 575px) */
+@media screen and (max-width: 575px) {
+  #message {
+    width: 100%;
+    height: 110px;
+    font-size: 14px;
+    padding: 0.8em;
+  }
+}
+
+#Message:focus {
+  color: gray   ;
+  background-color: black;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,-13px -13px 100px #ffffff;
+}
+/* submit-btn */
+  .submit-btn{
+    height: 38px;
+    border: 1px solid;
+    border-radius: 40px;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+/* submit-btn */
+
+#your-vision{
+  font-size: 56px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Email-Section-End */
+#footer-email-icon-parent{
+  width: 41px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  background-color: red;
+  border-radius: 50%;
+  animation: 3s footer-icon-ring linear infinite alternate;
+}
+@keyframes footer-icon-ring{
+  from{
+    transition: all 2s;
+    border: 2px solid;
+    border-color: red;
+  }
+  to{
+    transition: all 2s;
+    border: 1px solid;
+    border-color: black;
+  }
+}
+
+#footer-email-icon{
+  font-size: 21px;
+}
+.footer-email-content{
+  font-size: 16px;
+  color: rgb(114, 104, 104);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#smart-email-link{
+  font-size: 14px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: -10px;
+}
+/* Email-Section-End */
+
+/* Email-Section-End */
+#footer-Location-icon-parent{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  animation: 3s footer-icon-ring linear infinite alternate;
+}
+@keyframes footer-icon-ring{
+  from{
+    transition: all 2s;
+    border: 2px solid;
+  }
+  to{
+    transition: all 2s;
+    border: 1px solid;
+    border-color: red;
+  }
+}
+
+#footer-Location-icon{
+  font-size: 21px;
+}
+.footer-Location-content{
+  font-size: 16px;
+  color: rgb(114, 104, 104);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#smart-Location-link{
+  font-size: 14px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: -10px;
+}
+/* Location-Section-End */
+
+/* Phone-Section-End */
+#footer-Phone-icon-parent{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  animation: 3s footer-icon-ring linear infinite alternate;
+}
+@keyframes footer-icon-ring{
+  from{
+    transition: all 2s;
+    border: 2px solid;
+  }
+  to{
+    transition: all 2s;
+    border: 1px solid;
+    border-color: red;
+  }
+}
+
+#footer-Phone-icon{
+  font-size: 17px;
+}
+.footer-Phone-content{
+  font-size: 16px;
+  color: rgb(114, 104, 104);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#smart-Phone-link{
+  font-size: 14px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: -10px;
+}
+/* Phone-Section-End */

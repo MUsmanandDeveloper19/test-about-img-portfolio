@@ -1,0 +1,653 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+#navbar{
+    background-color: black;
+}
+#my-logo{
+    width: 170px;
+    height: 40px;
+}
+/* Toggle-css-code */
+/* From Uiverse.io by prakashdc */ 
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 1.7em;
+  margin-top: -5px;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: red;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* Toggle-css-code */
+/* NAVBAR */
+#a-tag-line {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+#a-tag-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* text ke niche line */
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+
+#a-tag-line:hover::after {
+  width: 90%; /* hover pe poori line show */
+}
+/* NAVBAR */
+
+/* container-div */
+#container-img-div{
+  width: 310px;
+  height: 310px;
+  border: 4px solid red;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;  
+  /* top: 12px; */
+  /* left: 2.4px; */
+  z-index: 111;
+  animation: Bling 3s linear infinite alternate;
+}
+@keyframes Bling{
+  0%{
+    border: 4px solid red;
+  }
+  30%{
+    border: 4px solid gray;
+  }
+  60%{
+    border: 3px solid rgb(73, 4, 4);
+  }
+  80%{
+    border: 4px solid rgb(27, 23, 23);
+  }
+  100%{
+    border: 4px solid red;
+  }
+}
+
+@media screen and (max-width: 320px) {
+#container-img-div{
+  width: 260px;
+  height: 260px;
+  /* top: 5px; */
+  right: 10px;
+}  
+}
+
+#container-img{
+  width: 190px;
+  height: 290px;
+  margin-left: 55px;
+  margin-top: 10px;
+  border-bottom-left-radius: 38%;
+  border-bottom-right-radius: 38%;
+}
+
+
+@media screen and (max-width: 320px) {
+#container-img{
+  width: 170px;
+  height: 250px;
+}
+}
+
+/* Fade */
+ #fade{
+    font-family: Arial, Helvetica, sans-serif;
+    animation: fade 2s linear infinite alternate;
+ }
+ @keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+ }
+/* Fade */
+
+/* frontend-developer */
+ #im-usman-container{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  animation: usmancontainer 3s linear alternate infinite;
+ }
+ @keyframes usmancontainer {
+  0%{
+    color: black;
+  }
+  30%{
+    color: rgb(41, 12, 12);
+  }
+  60%{
+    color: rgb(59, 57, 57);
+  }
+  80%{
+    color: rgb(65, 39, 39);
+  }
+  100%{
+    color: white;
+  }
+  
+ }
+/* frontend-developer */
+ .typing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  text-align: center;
+  white-space: nowrap; /* Keeps text on one line */
+  overflow: hidden;
+}
+
+.static-text {
+  font-weight: bold;
+  font-size: 34px;
+  color: white;
+  margin-right: 8px;
+}
+
+.dynamic-text {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-size: 34px;
+  border-right: 2px solid #06b6d4; /* blinking cursor */
+  overflow: hidden;
+  transition: all 0.15s ease-in-out; /* smooth effect */
+  white-space: nowrap;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Large Devices (Desktops, 1200px and down) */
+@media screen and (max-width: 1200px) {
+  .typing, .static-text, .dynamic-text {
+    font-size: 30px;
+  }
+}
+
+/* Medium Devices (Tablets, 992px and down) */
+@media screen and (max-width: 992px) {
+  .typing, .static-text, .dynamic-text {
+    font-size: 26px;
+  }
+}
+
+/* Small Devices (Landscape Phones, 768px and down) */
+@media screen and (max-width: 768px) {
+  .typing, .static-text, .dynamic-text {
+    font-size: 22px;
+  }
+}
+
+/* Extra Small Devices (Phones, 576px and down) */
+@media screen and (max-width: 576px) {
+  .typing {
+    flex-direction: row; /* stays in same line */
+    flex-wrap: nowrap;
+  }
+  .static-text {
+    margin-right: 6px;
+  }
+  .typing, .static-text, .dynamic-text {
+    font-size: 18px;
+  }
+}
+
+/* Very Small Devices (Under 400px) */
+@media screen and (max-width: 400px) {
+  .typing, .static-text, .dynamic-text {
+    font-size: 16px;
+  }
+}
+
+/* frontend-developer */
+
+
+/* Navbar-icons */
+ /* Github-icon */
+ #nav-icons{
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgb(29, 39, 39);
+  border-radius: 50%;
+  background-color: rgb(18, 21, 21);
+  animation: borderIcon 1s linear infinite alternate;
+ }
+ @keyframes borderIcon{
+  from{
+  transition: all 34s;
+  }
+  to{
+    border: 1px solid rgb(99, 16, 16);
+    background-color: rgb(48, 8, 8);
+  }
+ }
+  #nav-icons:hover{
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: rgb(125, 22, 17);
+  transform: rotate(716deg);
+  transition: all 0.6s;
+  }
+ /* Github-icon */
+ /* set-icon */
+  #linkedin-icon{
+    color: white;
+    font-size: 15px;
+  }
+  #github-icon{
+    color: white;
+    font-size: 17px;
+  }
+  #whatsapp-icon{
+    color: white;
+    font-size: 17px;    
+  }
+  #youtube-icon{
+    color: white;
+    font-size: 17px;
+  }
+ /* set-icon */
+/* Navbar-icons */
+
+/* Media query */
+@media screen and (max-width: 1207px) {
+  .container-img-div-animated-1{
+    left: 450px;
+  }   
+}
+@media screen and (max-width: 1190px) {
+  .container-img-div-animated-1{
+    left: 430px;
+  }   
+}
+@media screen and (max-width: 1170px) {
+  .container-img-div-animated-1{
+    left: 420px;
+  }   
+}
+@media screen and (max-width: 1160px) {
+  .container-img-div-animated-1{
+    left: 410px;
+  }   
+}
+@media screen and (max-width: 1150px) {
+  .container-img-div-animated-1{
+    left: 406px;
+  }   
+}
+@media screen and (max-width: 1140px) {
+  .container-img-div-animated-1{
+    left: 406px;
+  }   
+}
+@media screen and (max-width: 1130px) {
+  .container-img-div-animated-1{
+    left: 400px;
+  }   
+}
+@media screen and (max-width: 1120px) {
+  .container-img-div-animated-1{
+    left: 394px;
+  }   
+}
+@media screen and (max-width: 1110px) {
+  .container-img-div-animated-1{
+    left: 390px;
+  }   
+}
+@media screen and (max-width: 1100px) {
+  .container-img-div-animated-1{
+    left: 384px;
+  }   
+}
+@media screen and (max-width: 1090px) {
+  .container-img-div-animated-1{
+    left: 380px;
+  }   
+}
+@media screen and (max-width: 1080px) {
+  .container-img-div-animated-1{
+    left: 375px;
+  }   
+}
+@media screen and (max-width: 1070px) {
+  .container-img-div-animated-1{
+    left: 370px;
+  }   
+}
+@media screen and (max-width: 1060px) {
+  .container-img-div-animated-1{
+    left: 365px;
+  }   
+}
+@media screen and (max-width: 1050px) {
+  .container-img-div-animated-1{
+    left: 360px;
+  }   
+}
+@media screen and (max-width: 1040px) {
+  .container-img-div-animated-1{
+    left: 355px;
+  }   
+}
+@media screen and (max-width: 1030px) {
+  .container-img-div-animated-1{
+    left: 350px;
+  }   
+}
+@media screen and (max-width: 1020px) {
+  .container-img-div-animated-1{
+    left: 345px;
+  }   
+}
+@media screen and (max-width: 1010px) {
+  .container-img-div-animated-1{
+    left: 339px;
+  }   
+}
+@media screen and (max-width: 1000px) {
+  .container-img-div-animated-1{
+    left: 335px;
+  }   
+}
+@media screen and (max-width: 990px) {
+  .container-img-div-animated-1{
+    left: 329px;
+  }   
+}
+@media screen and (max-width: 980px) {
+  .container-img-div-animated-1{
+    left: 325px;
+  }   
+}
+@media screen and (max-width: 970px) {
+  .container-img-div-animated-1{
+    left: 320px;
+  }   
+}
+@media screen and (max-width: 950px) {
+  .container-img-div-animated-1{
+    left: 310px;
+  }   
+}
+@media screen and (max-width: 930px) {
+  .container-img-div-animated-1{
+    left: 300px;
+  }   
+}
+@media screen and (max-width: 910px) {
+  .container-img-div-animated-1{
+    left: 290px;
+  }   
+}
+@media screen and (max-width: 890px) {
+  .container-img-div-animated-1{
+    left: 280px;
+  }   
+}
+@media screen and (max-width: 870px) {
+  .container-img-div-animated-1{
+    left: 270px;
+  }   
+}
+@media screen and (max-width: 850px) {
+  .container-img-div-animated-1{
+    left: 260px;
+  }   
+}
+@media screen and (max-width: 830px) {
+  .container-img-div-animated-1{
+    left: 250px;
+  }   
+}
+@media screen and (max-width: 810px) {
+  .container-img-div-animated-1{
+    left: 240px;
+  }   
+}
+@media screen and (max-width: 790px) {
+  .container-img-div-animated-1{
+    left: 230px;
+  }   
+}
+@media screen and (max-width: 770px) {
+  .container-img-div-animated-1{
+    left: 220px;
+  }   
+}
+@media screen and (max-width: 750px) {
+  .container-img-div-animated-1{
+    left: 210px;
+  }   
+}
+@media screen and (max-width: 730px) {
+  .container-img-div-animated-1{
+    left: 200px;
+  }   
+}
+@media screen and (max-width: 710px) {
+  .container-img-div-animated-1{
+    left: 190px;
+  }   
+}
+@media screen and (max-width: 690px) {
+  .container-img-div-animated-1{
+    left: 180px;
+  }   
+}
+@media screen and (max-width: 670px) {
+  .container-img-div-animated-1{
+    left: 170px;
+  }   
+}
+@media screen and (max-width: 650px) {
+  .container-img-div-animated-1{
+    left: 160px;
+  }   
+}
+@media screen and (max-width: 630px) {
+  .container-img-div-animated-1{
+    left: 150px;
+  }   
+}
+@media screen and (max-width: 610px) {
+  .container-img-div-animated-1{
+    left: 140px;
+  }   
+}
+@media screen and (max-width: 590px) {
+  .container-img-div-animated-1{
+    left: 130px;
+  }   
+}
+@media screen and (max-width: 560px) {
+  .container-img-div-animated-1{
+    left: 120px;
+  }   
+}
+@media screen and (max-width: 550px) {
+  .container-img-div-animated-1{
+    left: 110px;
+  }   
+}
+@media screen and (max-width: 530px) {
+  .container-img-div-animated-1{
+    left: 100px;
+  }   
+}
+@media screen and (max-width: 510px) {
+  .container-img-div-animated-1{
+    left: 90px;
+  }   
+}
+@media screen and (max-width: 490px) {
+  .container-img-div-animated-1{
+    left: 80px;
+  }   
+}
+@media screen and (max-width: 470px) {
+  .container-img-div-animated-1{
+    left: 70px;
+  }   
+}
+@media screen and (max-width: 460px) {
+  .container-img-div-animated-1{
+    left: 60px;
+  }   
+}
+@media screen and (max-width: 440px) {
+  .container-img-div-animated-1{
+    left: 55px;
+  }   
+}
+@media screen and (max-width: 420px) {
+  .container-img-div-animated-1{
+    left: 45px;
+  }   
+}
+@media screen and (max-width: 4000px) {
+  .container-img-div-animated-1{
+    left: 35px;
+  }   
+}
+@media screen and (max-width: 380px) {
+  .container-img-div-animated-1{
+    left: 25px;
+  }   
+}
+@media screen and (max-width: 360px) {
+  .container-img-div-animated-1{
+    left: 15px;
+  }   
+}
+@media screen and (max-width: 340px) {
+  .container-img-div-animated-1{
+    left: 5px;
+  }   
+}
+@media screen and (max-width: 320px) {
+  .container-img-div-animated-1{
+    width: 290px;
+    height: 0px;
+  }   
+}
+@keyframes border {
+    0%{
+     background-color: black;   
+     width: 300px;
+     height: 300px;
+    }
+    20%{
+     background-color: black;   
+     width: 350px;
+     height: 350px;   
+    }
+}
+
+/* Download-my-cv-css-code */
+.download-my-cv-button {
+  width: 250px;
+  --red: #ff1b1b;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--red);
+  background: linear-gradient(
+    to right,
+    rgba(255, 27, 27, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 27, 27, 0.1) 100%
+  );
+  color: var(--red);
+  box-shadow: inset 0 0 10px rgba(255, 27, 27, 0.4),
+              0 0 9px 3px rgba(255, 27, 27, 0.1);
+}
+
+.download-my-cv-button:hover {
+  color: #ff8282;
+  box-shadow: inset 0 0 10px rgba(255, 27, 27, 0.6),
+              0 0 9px 3px rgba(255, 27, 27, 0.2);
+}
+
+.download-my-cv-button:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    rgba(255, 27, 27, 0.1) 40%,
+    rgba(255, 27, 27, 0.1) 60%,
+    transparent 100%
+  );
+}
+.download-my-cv-button:hover:before {
+  transform: translateX(15em);
+}
+/* Download-my-cv-css-code */
+
+
+
